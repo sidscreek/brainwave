@@ -1,4 +1,4 @@
-import React from "react";
+import SectionSvg from "../assets/svg/SectionSvg";
 
 const Sections = ({
   className,
@@ -10,6 +10,7 @@ const Sections = ({
 }) => {
   return (
     <div
+      id={id}
       className={`relative ${
         customPaddings ||
         `py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : " "} ${
@@ -29,6 +30,7 @@ const Sections = ({
               crossesOffset && crossesOffset
             } pointer-events-none lg:lock xl:left-10 right-10`}
           />
+          <SectionSvg crossesOffset={crossesOffset} />
         </>
       )}
     </div>
